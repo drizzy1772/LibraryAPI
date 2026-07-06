@@ -150,18 +150,10 @@ The API uses **JWT Bearer Authentication**.
 
 Some endpoints require **Admin** privileges, while others are available to authenticated users only.
 
-## 📈 Future Improvements
-
-* Shopping cart
-* Book categories
-* Search and filtering
-* Pagination
-* Email verification
-* Password reset
-* Book cover image upload
-* CI/CD with GitHub Actions
-* Deployment to Render or Railway
 
 ## 📄 License
 
-This project is created for educational and portfolio purposes.
+This project is under MIT license.
+
+## Author
+That project was made by **drizzy1772**
