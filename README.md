@@ -1,159 +1,113 @@
-# 📚 BookStore API
+# BookStore API
 
-A modern RESTful API for an online bookstore built with **FastAPI**, **PostgreSQL**, **SQLAlchemy 2.0**, and **Docker**. The project provides authentication, book management, ordering, wishlists, and reviews while following a clean architecture suitable for learning and portfolio purposes.
+Production-ready REST API for an online bookstore with authentication, book management, wishlists, reviews, and order processing.
 
-## ✨ Features
-
-* 🔐 JWT Authentication
-* 👤 User registration and login
-* 👑 Role-based authorization (Admin/User)
-* 📖 CRUD operations for books
-* ✍️ Author management
-* 🛒 Book ordering
-* ❤️ Wishlist management
-* ⭐ Book reviews and ratings
-* 🗄️ PostgreSQL database
-* 🔄 Alembic database migrations
-* 🐳 Docker & Docker Compose support
-* 🧪 API testing with Pytest
-* 📄 Automatic API documentation (Swagger/OpenAPI)
-
-## 🛠️ Tech Stack
+## Stack
 
 * FastAPI
-* SQLAlchemy 2.0 (Async)
 * PostgreSQL
+* SQLAlchemy 2.0 (Async)
 * Alembic
-* AsyncPG
-* Pydantic
 * JWT Authentication
-* Docker
+* Docker Compose
 * Pytest
 
-## 📂 Project Structure
+## Key Features
 
-```
-.
-├── .github/
-├── .vscode/
-├── alembic/
-├── app/
-│   ├── routers/
-│   ├── models.py
-│   ├── schemas.py
-│   ├── crud.py
-│   ├── database.py
-│   ├── auth.py
-│   ├── config.py
-│   └── main.py
-├── tests/
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-├── alembic.ini
-├── bookstore_schema.sql
-├── clean_db.py
-└── README.md
-```
+* ✅ JWT authentication
+* ✅ User registration and login
+* ✅ Role-based authorization (Admin/User)
+* ✅ CRUD operations for books
+* ✅ Author management
+* ✅ Order management
+* ✅ Wishlist support
+* ✅ Book reviews and ratings
+* ✅ Async SQLAlchemy 2.0
+* ✅ PostgreSQL database
+* ✅ Alembic database migrations
+* ✅ Docker Compose support
+* ✅ Test coverage with Pytest
 
-## 🚀 Getting Started
+## API Scheme
 
-### Clone the repository
+*Add your API schema image here.*
+
+## API Endpoints
+
+| Method | Path                  | Description                 |
+| ------ | --------------------- | --------------------------- |
+| POST   | `/auth/register`      | Register new user           |
+| POST   | `/auth/login`         | Login and receive JWT token |
+| GET    | `/books`              | Get all books               |
+| GET    | `/books/{id}`         | Get book by ID              |
+| POST   | `/books`              | Create book (Admin)         |
+| PUT    | `/books/{id}`         | Update book (Admin)         |
+| DELETE | `/books/{id}`         | Delete book (Admin)         |
+| GET    | `/authors`            | Get all authors             |
+| POST   | `/authors`            | Create author (Admin)       |
+| POST   | `/orders`             | Create order                |
+| GET    | `/orders`             | Get user orders             |
+| POST   | `/wishlist/{book_id}` | Add book to wishlist        |
+| GET    | `/wishlist`           | Get wishlist                |
+| DELETE | `/wishlist/{book_id}` | Remove book from wishlist   |
+| POST   | `/reviews/{book_id}`  | Create review               |
+| GET    | `/reviews/{book_id}`  | Get book reviews            |
+
+## Quick Start
 
 ```bash
 git clone https://github.com/yourusername/bookstore-api.git
 cd bookstore-api
-```
 
-### Configure environment
-
-Create a `.env` file:
-
-```env
-DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/bookstore
-SECRET_KEY=your_secret_key
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-```
-
-### Start the application
-
-```bash
 docker compose up --build
-```
 
-### Run database migrations
-
-```bash
 docker compose exec web alembic upgrade head
 ```
 
-### API Documentation
+## Structure of Project
 
-Swagger UI:
+```
+bookstore-api
+│
+├── app/
+│   ├── routers/
+│   ├── auth.py
+│   ├── config.py
+│   ├── crud.py
+│   ├── database.py
+│   ├── models.py
+│   ├── schemas.py
+│   └── main.py
+│
+├── alembic/
+├── tests/
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── alembic.ini
+└── README.md
+```
+
+## API Docs
+
+Swagger UI available at:
 
 ```
 http://localhost:8000/docs
 ```
 
-ReDoc:
+### Screenshot
 
-```
-http://localhost:8000/redoc
-```
+*Add your Swagger screenshot here.*
 
-## 🧪 Running Tests
+### Live API
 
-```bash
-pytest
-```
-
-## 📌 Main API Endpoints
-
-### Authentication
-
-* `POST /auth/register`
-* `POST /auth/login`
-
-### Books
-
-* `GET /books`
-* `GET /books/{id}`
-* `POST /books`
-* `PUT /books/{id}`
-* `DELETE /books/{id}`
-
-### Authors
-
-* `GET /authors`
-* `POST /authors`
-
-### Orders
-
-* `POST /orders`
-* `GET /orders`
-
-### Wishlist
-
-* `POST /wishlist/{book_id}`
-* `GET /wishlist`
-* `DELETE /wishlist/{book_id}`
-
-### Reviews
-
-* `POST /reviews/{book_id}`
-* `GET /reviews/{book_id}`
-
-## 🔒 Authorization
-
-The API uses **JWT Bearer Authentication**.
-
-Some endpoints require **Admin** privileges, while others are available to authenticated users only.
-
-
-## 📄 License
-
-This project is under MIT license.
+*Deploy your project (Render/Railway) and place the link here.*
 
 ## Author
-That project was made by **drizzy1772**
+
+This project is developed by **Drizzy1772**.
+
+## License
+
+This project is licensed under the MIT License.
