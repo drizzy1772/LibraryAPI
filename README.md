@@ -30,7 +30,8 @@ Production-ready REST API for an online bookstore with authentication, book mana
 
 ## API Scheme
 
-*Add your API schema image here.*
+<img width="1445" height="970" alt="tonka5bookapishka" src="https://github.com/user-attachments/assets/eb0118a8-e830-4e63-97b6-a262b0420332" />
+
 
 ## API Endpoints
 
