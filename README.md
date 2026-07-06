@@ -97,13 +97,14 @@ Swagger UI available at:
 http://localhost:8000/docs
 ```
 
-### Screenshot
+### Swagger UI Image
 
-*Add your Swagger screenshot here.*
+<img width="1364" height="1497" alt="Screenshot 2026-06-26 at 17-18-39 BookStoreApishka - Swagger UI" src="https://github.com/user-attachments/assets/825b0704-b160-490b-be47-7c50a2e39a19" />
+
 
 ### Live API
 
-*Deploy your project (Render/Railway) and place the link here.*
+https://bookapishka.onrender.com
 
 ## Author
 
